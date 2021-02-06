@@ -34,19 +34,20 @@ local function on_tick2()
 
 	if list~=nil then
 		if game.tick >=list.req_tick then 
+			list_=list
+			list=list.next
 			for _, e in pairs(
-				game.players[list.index].surface.find_entities_filtered(
-					{area = {{list.position.x - radius, list.position.y - radius}, {list.position.x + radius, list.position.y + radius}}}
+				game.players[list_.index].surface.find_entities_filtered(
+					{area = {{list_.position.x - radius, list_.position.y - radius}, {list_.position.x + radius, list_.position.y + radius}}}
 				)
 			) do
 				if e.valid and e.health then
-					local distance_from_center = math.sqrt((e.position.x - list.position.x) ^ 2 + (e.position.y - list.position.y) ^ 2)
+					local distance_from_center = math.sqrt((e.position.x - list_.position.x) ^ 2 + (e.position.y - list_.position.y) ^ 2)
 					if distance_from_center <= radius then
 						e.damage(damage, 'player', 'explosion')
 					end
 				end
 			end
-			list=list.next
 		end
 	end
 end
