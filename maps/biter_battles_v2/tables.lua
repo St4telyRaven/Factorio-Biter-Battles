@@ -11,7 +11,7 @@ Public.base_ammo_modifiers = {
 	["bullet"] = 0,
 	["shotgun-shell"] = 1,
 	["flamethrower"] = -(6/9),
-	["grenade"] = -(5/7),
+	["grenade"] = -.6,
 	["landmine"] = -0.9
 }
 
