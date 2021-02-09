@@ -30,7 +30,7 @@ local radius = 3
 
 local function on_tick2()
 
-	local damage = 15
+	local damage = 21
 
 	if list~=nil then
 		if game.tick >=list.req_tick then 
