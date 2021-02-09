@@ -26,7 +26,7 @@ Public.upgrade_modifiers = {
 	["flamethrower-turret"] = 0.02,
 	["laser-turret"] = 0.3,
 	["shotgun-shell"] = 0.6,
-	["grenade"] = 1,
+	["grenade"] = 0.6,
 	["landmine"] = 0.04
 }
 
